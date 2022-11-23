@@ -1,0 +1,8 @@
+.metals
+metals.sbt
+.bloop
+.DS_Store
+.launch.json
+.vscode/settings.json
+sbt.json
+.bsp/metals.sbt
