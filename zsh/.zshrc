@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git)
+#plugins=(gitfast,scala)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,4 +101,38 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
+# jenv setup
+export PATH="/Users/norbertlazzeri/.jenv/shims:${PATH}"
+export JENV_SHELL=zsh
+export JENV_LOADED=1
+unset JAVA_HOME
+source '/usr/local/Cellar/jenv/0.5.4/libexec/libexec/../completions/jenv.zsh'
+jenv rehash 2>/dev/null
+jenv() {
+  typeset command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  enable-plugin|rehash|shell|shell-options)
+    eval `jenv "sh-$command" "$@"`;;
+  *)
+    command jenv "$command" "$@";;
+  esac
+}
+
+
+# make neovim default vim editor
 alias vim="nvim"
+
+# aws sso + export profile for legacy aws tools
+sso() {
+  aws sso login --profile $1 && yawsso --profile $1
+}
+
+# shortcut for repository directory
+repos() {
+  cd ~/dev/repos/$1
+}
