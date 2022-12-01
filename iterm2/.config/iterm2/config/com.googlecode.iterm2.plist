@@ -573,7 +573,15 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>0A53BDCB-B650-4139-A215-AA7E15127643</string>
+	<key>HTMLTabTitles</key>
+	<false/>
 	<key>HapticFeedbackForEsc</key>
+	<false/>
+	<key>HideActivityIndicator</key>
+	<false/>
+	<key>HideTab</key>
+	<false/>
+	<key>HideTabNumber</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
@@ -939,6 +947,8 @@
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Use Transparency</key>
+			<true/>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1305,7 +1315,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Space</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tab Color</key>
@@ -1328,7 +1338,7 @@
 			<key>Thin Strokes</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.047273556472081223</real>
+			<real>0.0</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unlimited Scrollback</key>
@@ -2725,10 +2735,16 @@
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
+	<key>ShowNewOutputIndicator</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.24240636081560288</real>
+	<real>0.23522483989061801</real>
+	<key>StretchTabsToFillBar</key>
+	<true/>
+	<key>TabsHaveCloseButton</key>
+	<true/>
 	<key>ThreeFingerEmulates</key>
 	<true/>
 	<key>VisualIndicatorForEsc</key>
