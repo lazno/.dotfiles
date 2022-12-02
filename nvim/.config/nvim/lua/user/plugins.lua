@@ -50,6 +50,11 @@ return packer.startup(function(use)
       },
       commit = "829e9f68e10a998198e17bf5b348a6947f9d3c2e"
   }
+  -- treesitter
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
