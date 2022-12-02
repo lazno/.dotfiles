@@ -11,10 +11,10 @@ configs.setup {
   highlight = {
     enable = true, -- enable synthax highlighting
     disable = { "" }, -- disable syntax highlighting for these languages
-    additional_vim_regex_highlighting = true, -- some additional highlighting that vim does out of the box
+    additional_vim_regex_highlighting = false, -- some additional highlighting that vim does out of the box
   },
   indent = {
     enable = true, -- enable automatic indentation when you add a new line
     disable = { "" }, -- disable automatic indentation for these languages
-  }
+  },
 }
