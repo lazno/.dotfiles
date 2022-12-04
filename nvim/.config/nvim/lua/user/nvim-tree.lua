@@ -15,8 +15,10 @@ nvim_tree.setup {
     width = 30,
     mappings = {
       list = {
-        {key = {"l", "<CR>"}, action = "edit"}, -- open file or folder when pressing enter or "l"
+        {key = "l", action = "edit"}, -- open file or folder when pressing enter or "l"
         {key = "h", action = "close_node" }, -- close folder when pressing "h"
+        {key = "<C-i>", action = "toggle_file_info" }, -- show file info
+        {key = "<C-k>", action = "" }, -- unmap since we use this for window navigation 
       }
     }
   },
