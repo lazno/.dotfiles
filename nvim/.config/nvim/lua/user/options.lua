@@ -16,14 +16,14 @@ local options = {
   swapfile = false,                        -- creates a swapfile
   termguicolors = true,                    -- set term gui colors (most terminals support this)
   timeoutlen = 1000,                       -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = false,                         -- enable persistent undo
-  updatetime = 100,                       -- faster completion (4000ms default)
+  undofile = false,                        -- enable persistent undo
+  updatetime = 100,                        -- faster completion (4000ms default)
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
   number = true,                           -- set numbered lines
-  ruler = false,
+  ruler = true,                            -- show current line and column number in the bottom right
   relativenumber = true,                   -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
@@ -33,13 +33,17 @@ local options = {
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   title = true,
 }
-
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+vim.cmd "set whichwrap+=<,>,[,],h,l" -- allow navigation with listed motions to wrap lines. means that e.g. pressing l at the end of the line will jump to the next line
+vim.cmd [[set iskeyword+=-]] -- defines what vim qualifies as "word" when using the "w" motion
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]]
+vim.cmd [[
+  augroup Format-Options
+    autocmd!
+    autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+  augroup END
+]]
