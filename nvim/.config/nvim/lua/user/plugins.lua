@@ -53,8 +53,13 @@ return packer.startup(function(use)
   -- treesitter
   use {
       'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
+      run = ':TSUpdate',
+      commit = "4953fdf73ef5ada18e1e969019803605f4f4a4ac",
   }
+  -- auto completion
+  use {"hrsh7th/nvim-cmp", commit = "93f385c17611039f3cc35e1399f1c0a8cf82f1fb"} -- auto completion engine 
+  use { "saadparwaiz1/cmp_luasnip", commit = "18095520391186d634a0045dacaa346291096566" }
+
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
