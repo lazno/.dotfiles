@@ -63,7 +63,7 @@ return packer.startup(function(use)
   use { "rafamadriz/friendly-snippets", commit = "9b3e497cf0c3abcf73d791968a9768a22405fa13"} -- snippets for luasnip
   use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" } -- neovim api autocompletion
 
-  use { 'nvim-lualine/lualine.nvim', commit = "bfa0d99ba6f98d077dd91779841f1c88b7b5c165" }  -- a statusline
+  use { "nvim-lualine/lualine.nvim", commit = "bfa0d99ba6f98d077dd91779841f1c88b7b5c165" }  -- a statusline
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

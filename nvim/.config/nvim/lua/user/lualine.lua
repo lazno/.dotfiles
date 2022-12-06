@@ -16,13 +16,14 @@ lualine.setup {
     },
     ignore_focus = {},
     always_divide_middle = true,
-    globalstatus = false,
+    globalstatus = true, -- only show one statusline instead of one per window
     refresh = {
       statusline = 1000,
       tabline = 1000,
       winbar = 1000,
     }
   },
+  -- what information is displayed in the different sections
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
