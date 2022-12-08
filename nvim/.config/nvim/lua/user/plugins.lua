@@ -43,11 +43,12 @@ packer.init {
 return packer.startup(function(use)
 
   use { 'nvim-tree/nvim-web-devicons', commit = "189ad3790d57c548896a78522fd8b0d0fc11be31" } -- an icon set used by various plugins
+  use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7"} -- Useful lua functions used by lots of plugins
+  use { "folke/tokyonight.nvim", commit = "50594ee3032d867013fa9c9dc4676a2a96c9b660"} -- a colorscheme
 
-  use {"wbthomason/packer.nvim", commit = "dcd2f380bb49ec2dfe208f186236dd366434a4d5"} -- Have packer manage itself
-  use {"nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7"} -- Useful lua functions used by lots of plugins
+  use { "wbthomason/packer.nvim", commit = "dcd2f380bb49ec2dfe208f186236dd366434a4d5"} -- Have packer manage itself
   use { "windwp/nvim-autopairs", commit = "5d75276fce887c0cf433bb1b9867717907211063"} -- autopairs
-  use {"nvim-tree/nvim-tree.lua",  commit = "829e9f68e10a998198e17bf5b348a6947f9d3c2e" }-- A file explorer
+  use { "nvim-tree/nvim-tree.lua",  commit = "829e9f68e10a998198e17bf5b348a6947f9d3c2e" }-- A file explorer
   
   -- treesitter
   use {
@@ -62,8 +63,11 @@ return packer.startup(function(use)
   use { "saadparwaiz1/cmp_luasnip", commit = "18095520391186d634a0045dacaa346291096566" } -- cmp luasnip integration
   use { "rafamadriz/friendly-snippets", commit = "9b3e497cf0c3abcf73d791968a9768a22405fa13"} -- snippets for luasnip
   use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" } -- neovim api autocompletion
+  use { "hrsh7th/cmp-nvim-lsp", commit = "59224771f91b86d1de12570b4070fe4ad7cd1eeb" } -- lsp autocompletion
 
   use { "nvim-lualine/lualine.nvim", commit = "bfa0d99ba6f98d077dd91779841f1c88b7b5c165" }  -- a statusline
+
+  use { "scalameta/nvim-metals", commit = "92f7451aa0dd0267027ab9a5850a4b7c1af33341"} -- neovim metals for scala
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

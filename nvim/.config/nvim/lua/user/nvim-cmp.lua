@@ -60,6 +60,7 @@ cmp.setup {
     end, { "i", "s" }),
   },
   sources = cmp.config.sources {
+    { name = "nvim_lsp"}, -- completion by the lsp
     { name = "nvim_lua" }, -- completion for the neovim lua api
     { name = "luasnip" }, -- completion by luasnip
   }

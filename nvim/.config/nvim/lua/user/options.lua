@@ -24,7 +24,7 @@ local options = {
   cursorline = true,                       -- highlight the current line
   number = true,                           -- set numbered lines
   ruler = true,                            -- show current line and column number in the bottom right
-  relativenumber = true,                   -- set relative numbered lines
+  relativenumber = false,                   -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                            -- display lines as one long line
@@ -41,6 +41,7 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l" -- allow navigation with listed motions to wrap lines. means that e.g. pressing l at the end of the line will jump to the next line
 vim.cmd [[set iskeyword+=-]] -- defines what vim qualifies as "word" when using the "w" motion
 
+-- dont add comments to a new line 
 vim.cmd [[
   augroup Format-Options
     autocmd!

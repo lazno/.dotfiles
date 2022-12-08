@@ -37,3 +37,8 @@ keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- disable highlighting for current search
 keymap("n", "<c-/>", ":noh<CR>", opts)
+keymap("n", "gD", 
+function()
+  vim.lsp.buf.definition()
+end)
+

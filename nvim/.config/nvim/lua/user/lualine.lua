@@ -14,6 +14,7 @@ lualine.setup {
       statusline = {},
       winbar = {},
     },
+    theme = 'tokyonight',
     ignore_focus = {},
     always_divide_middle = true,
     globalstatus = true, -- only show one statusline instead of one per window

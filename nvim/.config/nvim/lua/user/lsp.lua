@@ -1,0 +1,35 @@
+-- local -- keymap = vim.key-- keymap.set
+
+-- local opts = {noremap = true, silent = false}
+-- keymap("n", "g", "", opts)
+-- keymap("n", "gD", "lua vim.lsp.buf.definition()<CR>", opts)
+-- keymap("n", "K", "lua vim.lsp.buf.hover()<CR>", opts)
+-- keymap("n", "gi", "lua vim.lsp.buf.implementation()<CR>", opts)
+-- keymap("n", "gr", lua vim.lsp.buf.references(), opts)
+-- keymap("n", "gds", lua vim.lsp.buf.document_symbol(), opts)
+-- keymap("n", "gws", lua vim.lsp.buf.workspace_symbol(), opts)
+-- keymap("n", "<leader>cl", lua vim.lsp.codelens.run(), opts)
+-- keymap("n", "<leader>sh", lua vim.lsp.buf.signature_help(), opts)
+-- keymap("n", "<leader>rn", lua vim.lsp.buf.rename(), opts)
+-- keymap("n", "<leader>f", lua vim.lsp.buf.formatting(), opts)
+-- keymap("n", "<leader>ca", lua vim.lsp.buf.code_action(), opts)
+-- keymap("n", "<leader>ws", lua require("metals").hover_worksheet(), opts)
+-- all workspace diagnostics
+-- keymap("n", "<leader>aa", lua vim.diagnostic.setqflist(), opts)
+-- all workspace errors
+-- keymap("n", "<leader>ae", lua vim.diagnostic.setqflist({ severity = "E" }), opts)
+-- all workspace warnings
+-- keymap("n", "<leader>aw", lua vim.diagnostic.setqflist({ severity = "W" }), opts)
+-- buffer diagnostics only
+-- keymap("n", "<leader>d", lua vim.diagnostic.setloclist(), opts)
+-- keymap("n", "[c", lua vim.diagnostic.goto_prev({ wrap = false }), opts)
+-- keymap("n", "]c", lua vim.diagnostic.goto_next({ wrap = false }), opts)
+-- Example -- keymappings for usage with nvim-dap. If you don't use that, you can
+-- skip these
+-- keymap("n", "<leader>dc", lua require("dap").continue(), opts)
+-- keymap("n", "<leader>dr", lua require("dap").repl.toggle(), opts)
+-- keymap("n", "<leader>dK", lua require("dap.ui.widgets").hover(), opts)
+-- keymap("n", "<leader>dt", lua require("dap").toggle_breakpoint(), opts)
+-- keymap("n", "<leader>dso", lua require("dap").step_over(), opts)
+-- keymap("n", "<leader>dsi", lua require("dap").step_into(), opts)
+-- keymap("n", "<leader>dl", lua require("dap").run_last(), opts)

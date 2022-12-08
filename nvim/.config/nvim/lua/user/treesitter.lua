@@ -1,11 +1,11 @@
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   print "could not require treesitter"
-  retrurn
+  return
 end
 
 configs.setup {
-  ensure_installed = "maintained", -- only install mainained language parsers
+  ensure_installed = "all", -- only install mainained language parsers
   sync_install = false, -- install languages async
   ignore_install = { "" }, -- do not install these language parsers
   highlight = {
