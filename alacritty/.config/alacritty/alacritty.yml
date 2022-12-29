@@ -289,13 +289,13 @@ colors:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
 shell:
-  program: /usr/bin/login
+  program: /usr/local/bin/tmux
   args:
-    - -fpql
-    - Norbert Lazzeri
-    - /bin/zsh
-    - --login
-
+    - new-session 
+    - -A
+    - -D
+    - -s
+    - main
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
