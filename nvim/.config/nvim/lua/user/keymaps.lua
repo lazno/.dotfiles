@@ -37,8 +37,19 @@ keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- disable highlighting for current search
 keymap("n", "<c-/>", ":noh<CR>", opts)
-keymap("n", "gD", 
+keymap("n", "gD",
 function()
   vim.lsp.buf.definition()
 end)
 
+-- dont copy to clipboard when deleting
+keymap("n", "x", "\"_x", opts)
+keymap("n", "d", "\"_d", opts)
+keymap("v", "d", "\"_d", opts)
+keymap("v", "x", "\"_x", opts)
+
+-- adjust yanking cursor behaviour
+keymap("n", "<A-J>", "\"yyy\"yp")
+-- keymap("x", "<leader><S-j>", "\"yy`>\"ygpk")
+keymap("x", "<A-J>", "\"yy`>\"ygp0`[<S-v>`]")
+keymap("v", "y", "y`>")

@@ -591,6 +591,10 @@
 	<true/>
 	<key>IRMemory</key>
 	<integer>4</integer>
+	<key>NeverWarnAboutShortLivedSessions_0A53BDCB-B650-4139-A215-AA7E15127643</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_0A53BDCB-B650-4139-A215-AA7E15127643_selection</key>
+	<integer>0</integer>
 	<key>NeverWarnAboutShortLivedSessions_EDFAF385-F6E5-49FF-B185-8DDA57CF81D8</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_EDFAF385-F6E5-49FF-B185-8DDA57CF81D8_selection</key>
@@ -713,7 +717,7 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.54816734790802002</real>
+				<real>0.39694990827319998</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>

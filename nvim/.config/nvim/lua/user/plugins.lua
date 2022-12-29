@@ -56,6 +56,10 @@ return packer.startup(function(use)
       run = ':TSUpdate',
       commit = "4953fdf73ef5ada18e1e969019803605f4f4a4ac",
   }
+  
+  -- use { "scalameta/nvim-metals", commit = "92f7451aa0dd0267027ab9a5850a4b7c1af33341"} -- neovim metals for scala
+  use { "scalameta/nvim-metals", commit = "613556dfa4cbdfcba4d515ce781e1b5f284f373c"} -- neovim metals for scala
+
   -- auto completion with cmp
   use { "hrsh7th/nvim-cmp", commit = "93f385c17611039f3cc35e1399f1c0a8cf82f1fb" } -- auto completion engine 
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completion (just autocomplete with words from current buffer)
@@ -67,7 +71,6 @@ return packer.startup(function(use)
 
   use { "nvim-lualine/lualine.nvim", commit = "bfa0d99ba6f98d077dd91779841f1c88b7b5c165" }  -- a statusline
 
-  use { "scalameta/nvim-metals", commit = "92f7451aa0dd0267027ab9a5850a4b7c1af33341"} -- neovim metals for scala
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

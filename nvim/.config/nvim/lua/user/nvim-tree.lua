@@ -8,6 +8,9 @@ nvim_tree.setup {
   diagnostics = { -- show any error in the file next to the file name in the tree view
     enable = true,
   },
+  git = {
+    ignore = false,
+  },
   update_focused_file = { -- highlight current file in the tree
     enable = true,
   },
