@@ -71,6 +71,7 @@ return packer.startup(function(use)
 
   use { "nvim-lualine/lualine.nvim", commit = "bfa0d99ba6f98d077dd91779841f1c88b7b5c165" }  -- a statusline
 
+  use { "mg979/vim-visual-multi", commit = "724bd53adfbaf32e129b001658b45d4c5c29ca1a"} -- multiline cursor
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
