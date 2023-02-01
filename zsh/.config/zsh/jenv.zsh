@@ -3,7 +3,7 @@ export PATH="/Users/norbertlazzeri/.jenv/shims:${PATH}"
 export JENV_SHELL=zsh
 export JENV_LOADED=1
 unset JAVA_HOME
-source '/usr/local/Cellar/jenv/0.5.4/libexec/libexec/../completions/jenv.zsh'
+source '/usr/local/Cellar/jenv/0.5.5_2/libexec/completions/jenv.zsh'
 jenv rehash 2>/dev/null
 jenv() {
   typeset command

@@ -288,14 +288,15 @@ colors:
 # Default:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
-shell:
-  program: /usr/local/bin/tmux
-  args:
-    - new-session 
-    - -A
-    - -D
-    - -s
-    - main
+#shell:
+  #  program: /bin/zsh
+  #program: /usr/local/bin/tmux
+  #args:
+  #  - new-session 
+  #  - -A
+  #  - -D
+  #  - -s
+  #  - main
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working

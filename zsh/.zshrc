@@ -7,7 +7,7 @@ compinit
 
 # use zoxide and fzf
 #https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd j zsh)"
 
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/theme.zsh"
