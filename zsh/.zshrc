@@ -12,7 +12,7 @@ eval "$(zoxide init --cmd j zsh)"
 
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/theme.zsh"
-plug "$HOME/.config/zsh/jenv.zsh"
+#plug "$HOME/.config/zsh/jenv.zsh"
 
 plug "zsh-users/zsh-autosuggestions" #show autosuggestions when typing
 plug "zap-zsh/supercharge" #better colors for ls etc
@@ -24,3 +24,7 @@ plug "zsh-users/zsh-syntax-highlighting"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
