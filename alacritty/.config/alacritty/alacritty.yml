@@ -706,13 +706,6 @@ key_bindings:
   - { key: Right,    mods: Alt,     chars: "\x1bf"                       } # one word right
   - { key: Left,     mods: Command, chars: "\x1bOH",   mode: AppCursor   } # Home
   - { key: Right,    mods: Command, chars: "\x1bOF",   mode: AppCursor   } # End
-  # tmux remappings
-  - { key: D,        mods: Command, chars: "\x02\x25"                    } # split pane |
-  - { key: D,        mods: Command|Shift, chars: "\x02\x22"              } # split pane -
-  - { key: H,        mods: Command|Alt, chars: "\x02\x1b\x5b\x44"          } # move pane left
-  - { key: L,        mods: Command|Alt, chars: "\x02\x1b\x5b\x43"          } # move pane right 
-  - { key: K,        mods: Command|Alt, chars: "\x02\x1b\x5b\x41"          } # move pane up
-  - { key: J,        mods: Command|Alt, chars: "\x02\x1b\x5b\x42"          } # move pane down 
   # german
   - { key: 28,      mods: Alt, chars: "{" }
   - { key: 25,      mods: Alt, chars: "}" }

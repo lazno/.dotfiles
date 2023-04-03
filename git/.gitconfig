@@ -14,3 +14,10 @@
 [filesystem "N/A|14.0.1|/dev/disk1s1"]
 	timestampResolution = 8000 nanoseconds
 	minRacyThreshold = 0 nanoseconds
+[init]
+	defaultBranch = main
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
