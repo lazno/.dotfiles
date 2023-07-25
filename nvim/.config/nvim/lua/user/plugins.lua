@@ -57,7 +57,7 @@ return packer.startup(function(use)
       commit = "4953fdf73ef5ada18e1e969019803605f4f4a4ac",
   }
   
-  -- use { "scalameta/nvim-metals", commit = "92f7451aa0dd0267027ab9a5850a4b7c1af33341"} -- neovim metals for scala
+  use { "scalameta/nvim-metals", commit = "92f7451aa0dd0267027ab9a5850a4b7c1af33341"} -- neovim metals for scala
   use { "scalameta/nvim-metals", commit = "613556dfa4cbdfcba4d515ce781e1b5f284f373c"} -- neovim metals for scala
 
   -- auto completion with cmp
@@ -72,6 +72,10 @@ return packer.startup(function(use)
   use { "nvim-lualine/lualine.nvim", commit = "bfa0d99ba6f98d077dd91779841f1c88b7b5c165" }  -- a statusline
 
   use { "mg979/vim-visual-multi", commit = "724bd53adfbaf32e129b001658b45d4c5c29ca1a"} -- multiline cursor
+
+
+  -- fast navigation
+  use { "phaazon/hop.nvim", commit = '90db1b2c61b820e230599a04fedcd2679e64bd07' }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

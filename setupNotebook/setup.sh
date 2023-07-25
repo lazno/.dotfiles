@@ -36,7 +36,7 @@ brew install --cask font-jetbrains-mono
 brew install ninja libtool cmake pkg-config gettext curl
 
 #install neovim v0.8.1
-cd ~ && git clone https://github.com/neovim/neovim && cd neovim && git checkout v0.8.1 && make CMAKE_BUILD_TYPE=RelWithDebInfo
+cd ~ && git clone https://github.com/neovim/neovim && cd neovim && git checkout v0.8.1 && make CMAKE_BUILD_TYPE=Release
 cd ~/neovim && sudo make install 
 sudo chown -R "${USER}" ~/.local/state
 
@@ -50,3 +50,41 @@ brew install coursier/formulas/coursier && cs setup
 
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
+
+
+brew install --cask visual-studio-code
+
+brew install --cask scroll-reverser
+
+
+cd ~/.dotfiles && stow karabiner
+brew install --cask karabiner-elements
+
+
+brew install node #install node and npm
+npm install -g aws-cdk # install aws cdk cli
+brew install yarn
+
+
+pip3 install yawsso
+
+brew install --cask docker
+brew install --cask docker-compose
+
+
+brew install --cask tunnelblick
+brew install --cask postman
+
+brew install gh #install github cli
+brew tap microsoft/git
+brew install --cask git-credential-manager-core # this will cache git credentials, so no retyping passwords
+
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+brew install terragrunt
+
+brew install jq
+
+pip3 install ec2instanceconnectcli # install mssh
+
+brew install --cask 1password/tap/1password-cli

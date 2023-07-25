@@ -1,4 +1,5 @@
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=~/Library/Python/3.9/bin:$PATH
 #using zap
 #https://github.com/zap-zsh/zap
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
@@ -28,3 +29,4 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+autoload -U compinit; compinit
