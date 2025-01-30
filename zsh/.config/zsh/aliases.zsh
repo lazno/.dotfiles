@@ -24,3 +24,11 @@ alias ssh="TERM=xterm-256color $(which ssh)"
 tg() {
   terragrunt $@
 }
+
+k() {
+  kubectl $@
+}
+
+# use like up 4 to cd up 4 directories
+up() { local p= i=${1:-1}; while (( i-- )); do p+=../; done; cd "$p$2"}
+alias ..="cd .."

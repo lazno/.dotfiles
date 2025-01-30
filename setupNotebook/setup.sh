@@ -88,3 +88,14 @@ brew install jq
 pip3 install ec2instanceconnectcli # install mssh
 
 brew install --cask 1password/tap/1password-cli
+
+scoop bucket add snyk https://github.com/snyk/scoop-snyk
+scoop install snyk
+
+#install nvm
+brew install nvm
+mkdir ~/.nvm
+
+echo "export NVM_DIR=~/.nvm\nsource \$(brew --prefix nvm)/nvm.sh" >> .zshrc
+
+pip3 install awsume #easily assume aws roles without explicitly using profiles

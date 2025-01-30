@@ -1,25 +1,16 @@
-[user]
-	name = Norbert Lazzeri
-	email = norbert.lazzeri@firstbird.com
-[core]
-	autocrlf = input
-	excludesfile = /Users/norbertlazzeri/.gitfiles/.gitignore_global
-	editor = nvim
-[filesystem "AdoptOpenJDK|11.0.5|/dev/disk1s1"]
-	timestampResolution = 7000 nanoseconds
-	minRacyThreshold = 0 nanoseconds
-[filesystem "N/A|13.0.2|/dev/disk1s1"]
-	timestampResolution = 6000 nanoseconds
-	minRacyThreshold = 0 nanoseconds
-[filesystem "N/A|14.0.1|/dev/disk1s1"]
-	timestampResolution = 8000 nanoseconds
-	minRacyThreshold = 0 nanoseconds
-[init]
-	defaultBranch = main
+[includeIf "gitdir:~/dev/repos-priv/"]
+    path = ~/.dotfiles/git/.gitconfig_personal
+[includeIf "gitdir:~/dev/repos/"]
+    path = ~/.dotfiles/git/.gitconfig_work
+[includeIf "gitdir:~/.dotfiles/"]
+    path = ~/.dotfiles/git/.gitconfig_personal
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
-[pull]
-	rebase = true
