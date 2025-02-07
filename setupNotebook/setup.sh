@@ -9,8 +9,9 @@ brew install --cask git-credential-manager-core # this will cache git credential
 
 brew install --cask wezterm
 
-
 brew install stow 	  #stow for managing dotfiles
+
+brew install starship
 
 brew install fzf    #fuzzy search engine
 brew install zoxide #jump to directories
@@ -48,9 +49,6 @@ cd ~/neovim && sudo make install
 sudo chown -R "${USER}" ~/.local/state
 
 cd ~/.dotfiles && stow nvim #setup neovim config
-
-brew install --cask authy
-brew install --cask bitwarden
 
 brew install --cask alfred
 brew install coursier/formulas/coursier && cs setup
