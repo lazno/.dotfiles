@@ -6,6 +6,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew tap microsoft/git
 brew install --cask git-credential-manager-core # this will cache git credentials, so no retyping passwords
+git credential-manager configure
 
 brew install --cask wezterm
 
