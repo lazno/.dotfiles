@@ -7,6 +7,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew tap microsoft/git
 brew install --cask git-credential-manager-core # this will cache git credentials, so no retyping passwords
 
+brew install --cask wezterm
+
+
+brew install stow 	  #stow for managing dotfiles
+
 brew install fzf    #fuzzy search engine
 brew install zoxide #jump to directories
 brew install exa    #replacement for ls
@@ -17,8 +22,7 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
 
 brew install rustup-init #rust
 
-brew install --cask kitty #kitty terminal manager
-brew install stow 	  #stow for managing dotfiles
+
 
 #clone dotfiles
 cd ~ && git clone https://github.com/lazno/.dotfiles.git 
