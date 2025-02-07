@@ -4,6 +4,9 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+brew tap microsoft/git
+brew install --cask git-credential-manager-core # this will cache git credentials, so no retyping passwords
+
 brew install fzf    #fuzzy search engine
 brew install zoxide #jump to directories
 brew install exa    #replacement for ls
@@ -76,8 +79,6 @@ brew install --cask tunnelblick
 brew install --cask postman
 
 brew install gh #install github cli
-brew tap microsoft/git
-brew install --cask git-credential-manager-core # this will cache git credentials, so no retyping passwords
 
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
