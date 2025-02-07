@@ -1,6 +1,6 @@
-#!/bin/zsh
+#brew install --cask nikitabobko/tap/aerospace!/bin/zsh
 
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#brew install --cask nikitabobko/tap/aerospace/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -12,6 +12,10 @@ brew install --cask wezterm
 
 brew install stow 	  #stow for managing dotfiles
 
+#clone dotfiles
+cd ~ && git clone https://github.com/lazno/.dotfiles.git 
+cd ~/.dotfiles && stow zsh #setup zshell config
+
 brew install starship
 
 brew install fzf    #fuzzy search engine
@@ -22,14 +26,18 @@ brew install exa    #replacement for ls
 zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
 
 
-brew install rustup-init #rust
+brew install --cask nikitabobko/tap/aerospace
+
+brew install neovim
+#install nvm and use it to install node (needed for lazyvim)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
 
+cd ~/.dotfiles && stow nvim #setup neovim config
 
-#clone dotfiles
-cd ~ && git clone https://github.com/lazno/.dotfiles.git 
+#brew install rustup-init #rust
 
-cd ~/.dotfiles && stow zsh #setup zshell config
+
 
 #install sdk manager
 curl -s "https://get.sdkman.io" | bash && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -44,12 +52,6 @@ brew install --cask font-jetbrains-mono
 #neovim build prerequisites
 brew install ninja libtool cmake pkg-config gettext curl
 
-#install neovim v0.8.1
-cd ~ && git clone https://github.com/neovim/neovim && cd neovim && git checkout v0.8.1 && make CMAKE_BUILD_TYPE=Release
-cd ~/neovim && sudo make install 
-sudo chown -R "${USER}" ~/.local/state
-
-cd ~/.dotfiles && stow nvim #setup neovim config
 
 brew install --cask alfred
 brew install coursier/formulas/coursier && cs setup
@@ -67,7 +69,6 @@ cd ~/.dotfiles && stow karabiner
 brew install --cask karabiner-elements
 
 
-brew install node #install node and npm
 npm install -g aws-cdk # install aws cdk cli
 brew install yarn
 
@@ -95,10 +96,6 @@ brew install --cask 1password/tap/1password-cli
 
 scoop bucket add snyk https://github.com/snyk/scoop-snyk
 scoop install snyk
-
-#install nvm
-brew install nvm
-mkdir ~/.nvm
 
 echo "export NVM_DIR=~/.nvm\nsource \$(brew --prefix nvm)/nvm.sh" >> .zshrc
 
