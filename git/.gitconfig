@@ -1,6 +1,6 @@
 [includeIf "gitdir:~/dev/repos-priv/"]
     path = ~/.dotfiles/git/.gitconfig_personal
-[includeIf "gitdir:~/dev/repos/"]
+[includeIf "gitdir:~/dev/work/"]
     path = ~/.dotfiles/git/.gitconfig_work
 [includeIf "gitdir:~/.dotfiles/"]
     path = ~/.dotfiles/git/.gitconfig_personal

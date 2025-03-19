@@ -6,3 +6,5 @@ metals.sbt
 .vscode/settings.json
 sbt.json
 .bsp/metals.sbt
+**/.env-awffa
+**/.env-ecmawf

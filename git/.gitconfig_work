@@ -1,9 +1,9 @@
 [user]
 	name = Lazzeri, Norbert
-	email = norbert.lazzeri@radancy.com
+	email = @15950024 
 [core]
 	autocrlf = input
-	excludesfile = /Users/norbertlazzeri/.gitfiles/.gitignore_global
+	excludesfile = ~/.gitfiles/.gitignore_global
 	editor = nvim
 [filesystem "AdoptOpenJDK|11.0.5|/dev/disk1s1"]
 	timestampResolution = 7000 nanoseconds
